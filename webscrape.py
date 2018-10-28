@@ -47,9 +47,9 @@ def sendEmail(subject, msg):
         server.ehlo()
         server.starttls()
         #change this line to send an email to any email
-        server.login("SteathlyShadowSniper@gmail.com", "%Password%")
+        server.login("email", "password")
         message = 'Subject: {} \n \n{}'.format(subject, msg)
-        server.sendmail("SteathlyShadowSniper@gmail.com", "SteathlyShadowSniper@gmail.com", message)
+        server.sendmail("email", "email", message)
         server.quit()
         print("Success: Email sent!")
     except:
